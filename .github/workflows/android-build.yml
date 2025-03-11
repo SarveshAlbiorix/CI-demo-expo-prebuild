@@ -37,8 +37,7 @@ jobs:
         run: |
           sudo apt-get update
           npm install
-          npm run prebuild
-          npx react-native-asset
+          npx expo prebuild
 
       - name: Set up Android SDK
         uses: android-actions/setup-android@v2
