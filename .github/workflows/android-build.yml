@@ -55,6 +55,11 @@ jobs:
         run: |
           echo "sdk.dir=$ANDROID_SDK_ROOT" > ./android/local.properties
 
+      - name: Build APK
+        run: |
+          cd android
+          ./gradlew assembleRelease
+
       - name: Set Release Date
         id: set_release_date
         run: |
